@@ -1,18 +1,12 @@
 import java.io.*;
 import java.net.*;
 
+import javax.annotation.processing.SupportedSourceVersion;
+
 public class Conect {
 	static String modifiedSentence;
-	static Receive receive;
-
-	/**
-	 * public static void name(String name, String IP) throws IOException {
-	 * DatagramSocket Socket = new DatagramSocket(); InetAddress IPAddress =
-	 * InetAddress.getByName(IP); byte[] send_name = new byte[name.length()];
-	 * send_name = name.getBytes(); DatagramPacket sendPacket = new
-	 * DatagramPacket(send_name, send_name.length, IPAddress, 5555);
-	 * Socket.send(sendPacket); System.out.println("Send"); Socket.close(); }
-	 */
+	static Receive receive = new Receive();
+	static Thread thread2d = new Thread(receive);
 
 	public static void sms(String sms, String IP) throws IOException {
 		DatagramSocket Socket = new DatagramSocket();
@@ -21,13 +15,13 @@ public class Conect {
 		send_name = sms.getBytes();
 		DatagramPacket sendPacket = new DatagramPacket(send_name, send_name.length, IPAddress, 3333);
 		Socket.send(sendPacket);
-		System.out.println("Отпарвило");
 		Socket.close();
 	}
 
-	public static void you_name() throws IOException {
-		receive = new Receive();
-		Thread thread2d = new Thread(receive);
+	public static void Receive() throws IOException {
 		thread2d.start();
+	}
+
+	public static void Receive_Diconect() throws IOException, InterruptedException {
 	}
 }
