@@ -34,7 +34,7 @@ public class Receive implements Runnable {
 			FrameChatApp.textArea.append(" \n");
 			if (receivePacket.getAddress() == IPAddress) {
 			} else {
-				FrameChatApp.textArea.append(sentence + sdf.format(currentDate) + "\n");
+				FrameChatApp.textArea.append(sentence + "|"+sdf.format(currentDate) + "\n");
 			}
 
 			receiveData = new byte[256];

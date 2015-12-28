@@ -6,10 +6,10 @@ public class Name {
 
 	public static void Nik(String name) {
 		if (name == null) {
-			name = JOptionPane.showInputDialog("Введите ваше имя");
+			name = JOptionPane.showInputDialog("Р’РІРµРґРёС‚Рµ СЃРІРѕРµ РёРјСЏ");
 			FrameChatApp.name = name;
-			FrameChatApp.My_name.setText("Ваше имя: " + name);
-
+			FrameChatApp.My_name.setText("Р’Р°С€Рµ РёРјСЏ: " + name);
+			Write_name.write(name);
 		}
 	}
 }

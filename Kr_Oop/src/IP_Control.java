@@ -6,7 +6,7 @@ public class IP_Control {
 
 	public static void IP(String IP) {
 		if (IP == null) {
-			JOptionPane.showMessageDialog(null, "Вы не выбрали собиседника");
+			JOptionPane.showMessageDialog(null, "Р’С‹ РЅРµ РІС‹Р±СЂР°Р»Рё РґСЂСѓРіР° РґР»СЏ Р±РёСЃРµРґС‹");
 
 		}
 	}
